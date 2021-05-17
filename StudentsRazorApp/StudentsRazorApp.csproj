@@ -1,0 +1,16 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="5.0.6" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\StudentsRazorApp.Models\StudentsRazorApp.Models.csproj" />
+    <ProjectReference Include="..\StudentsRazorApp.Services\StudentsRazorApp.Services.csproj" />
+  </ItemGroup>
+
+</Project>

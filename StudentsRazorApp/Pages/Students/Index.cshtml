@@ -1,0 +1,39 @@
+﻿@page
+@model StudentsRazorApp.Pages.Students.IndexModel
+@{
+    ViewData["Title"] = "Students";
+
+}
+
+<style>
+    .btn{
+        width:80px;
+    }
+
+</style>
+
+
+<div class="card-deck">
+    @foreach(var Students in Model.StudentProperty)
+    {
+        var photopath = "~/Images/" + (Students.studentphoto ?? "default.jpg");
+
+
+    <div class="card m-3" style="min-width:18rem; max-width:30.5%">
+        <div class="card-header">
+            <h3>@Students.StudentName</h3>
+        </div>
+        <img class="card-img-top imagethumbnail" src="@photopath"
+             asp-append-version="true" />
+
+        <div class="card-footer text-center">
+            <a href="#" class="btn btn-primary m-1">View</a>
+            <a href="#" class="btn btn-primary m-1">Edit</a>
+            <a href="#" class="btn btn-danger m-1">Delete</a>
+        </div>
+    </div>
+
+
+    }
+
+</div>
